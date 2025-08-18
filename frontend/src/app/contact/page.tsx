@@ -41,7 +41,7 @@ export default function ContactPage() {
             Get In Touch
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
-            Let's discuss your next project or just say hello!
+            Let&apos;s discuss your next project or just say hello!
           </p>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                   value={formData.subject}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="What's this about?"
+                  placeholder="What&apos;s this about?"
                 />
               </div>
 
@@ -265,7 +265,7 @@ export default function ContactPage() {
             </div>
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What's your development process?
+                What&apos;s your development process?
               </h3>
               <p className="text-gray-600">
                 I follow an agile approach with regular communication, milestone-based delivery, 

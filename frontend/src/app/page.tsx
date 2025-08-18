@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Plus, Search, Github, Eye } from 'lucide-react'
+import { Search, Github, Eye } from 'lucide-react'
 import { toast } from 'react-hot-toast'
 import axios from 'axios'
 import Image from 'next/image'

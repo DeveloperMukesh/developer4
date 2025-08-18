@@ -178,7 +178,7 @@ export default function AboutPage() {
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
             <h2 className="text-3xl font-bold mb-4">
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <p className="text-xl mb-6 opacity-90">
               Have a project in mind? I&apos;d love to hear about it!
