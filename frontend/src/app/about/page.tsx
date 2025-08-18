@@ -55,7 +55,7 @@ export default function AboutPage() {
             Who I Am
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate full-stack developer with a love for creating innovative digital solutions. 
+            I&apos;m a passionate full-stack developer with a love for creating innovative digital solutions. 
             With years of experience in web and mobile development, I specialize in building scalable, 
             user-friendly applications that solve real-world problems.
           </p>
@@ -181,7 +181,7 @@ export default function AboutPage() {
               Let's Work Together
             </h2>
             <p className="text-xl mb-6 opacity-90">
-              Have a project in mind? I'd love to hear about it!
+              Have a project in mind? I&apos;d love to hear about it!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

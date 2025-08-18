@@ -20,7 +20,7 @@ export const api = {
     return response.json()
   },
   
-  post: async (endpoint: string, data: any) => {
+  post: async (endpoint: string, data: unknown) => {
     const response = await fetch(buildApiUrl(endpoint), {
       method: 'POST',
       headers: {
@@ -34,7 +34,7 @@ export const api = {
     return response.json()
   },
   
-  put: async (endpoint: string, data: any) => {
+  put: async (endpoint: string, data: unknown) => {
     const response = await fetch(buildApiUrl(endpoint), {
       method: 'PUT',
       headers: {

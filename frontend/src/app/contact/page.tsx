@@ -19,7 +19,7 @@ export default function ContactPage() {
     
     // Simulate form submission
     setTimeout(() => {
-      toast.success('Message sent successfully! I\'ll get back to you soon.')
+      toast.success('Message sent successfully! I&apos;ll get back to you soon.')
       setFormData({ name: '', email: '', subject: '', message: '' })
       setIsSubmitting(false)
     }, 1000)
@@ -217,7 +217,7 @@ export default function ContactPage() {
               <div className="bg-blue-50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Current Availability</h3>
                 <p className="text-gray-600 mb-3">
-                  I'm currently available for new projects and opportunities.
+                  I&apos;m currently available for new projects and opportunities.
                 </p>
                 <div className="space-y-2 text-sm text-gray-600">
                   <p>• Freelance projects</p>
@@ -232,7 +232,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Response Time</h3>
                 <p className="text-gray-600">
                   I aim to respond to all inquiries within 24 hours during business days. 
-                  For urgent matters, please include "URGENT" in your subject line.
+                  For urgent matters, please include &quot;URGENT&quot; in your subject line.
                 </p>
               </div>
             </div>
@@ -251,7 +251,7 @@ export default function ContactPage() {
               </h3>
               <p className="text-gray-600">
                 I specialize in full-stack web applications, mobile apps, APIs, and e-commerce solutions. 
-                I'm open to discussing any project that involves modern web technologies.
+                I&apos;m open to discussing any project that involves modern web technologies.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm p-6">
@@ -278,7 +278,7 @@ export default function ContactPage() {
               </h3>
               <p className="text-gray-600">
                 Yes! I can help refactor, debug, add features, or maintain existing codebases. 
-                I'm comfortable working with legacy systems and modernizing them.
+                I&apos;m comfortable working with legacy systems and modernizing them.
               </p>
             </div>
           </div>

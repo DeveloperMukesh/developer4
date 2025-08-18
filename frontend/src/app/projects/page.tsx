@@ -1,9 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Plus, Search, Filter, ExternalLink, Github, Eye, Edit, Trash2 } from 'lucide-react'
+import { Plus, Search, Github, Eye, Edit, Trash2 } from 'lucide-react'
 import { toast } from 'react-hot-toast'
 import axios from 'axios'
+import Image from 'next/image'
 
 interface Project {
   _id: string
@@ -49,7 +50,7 @@ export default function ProjectsPage() {
       const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`)
       setProjects(response.data.projects || response.data)
       setLoading(false)
-    } catch (error) {
+    } catch (error: unknown) {
       console.error('Error fetching projects:', error)
       toast.error('Failed to fetch projects')
       setLoading(false)
@@ -74,8 +75,9 @@ export default function ProjectsPage() {
       setShowAddForm(false)
       resetForm()
       fetchProjects()
-    } catch (error: any) {
-      toast.error(error.response?.data?.error || 'Failed to save project')
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to save project'
+      toast.error(errorMessage)
     }
   }
 
@@ -101,9 +103,10 @@ export default function ProjectsPage() {
         await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/api/projects/${id}`)
         toast.success('Project deleted successfully!')
         fetchProjects()
-      } catch (error: any) {
-        toast.error(error.response?.data?.error || 'Failed to delete project')
-      }
+          } catch (error: unknown) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to delete project'
+      toast.error(errorMessage)
+    }
     }
   }
 
@@ -247,9 +250,11 @@ export default function ProjectsPage() {
             <div key={project._id} className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
               {project.imageUrl && (
                 <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
-                  <img
+                  <Image
                     src={project.imageUrl}
                     alt={project.title}
+                    width={400}
+                    height={225}
                     className="w-full h-full object-cover"
                   />
                 </div>
